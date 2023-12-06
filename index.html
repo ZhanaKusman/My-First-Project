@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-        <h1>About</h1>
+    <header>
+        <nav> 
+            <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#connect">Connect</a></li>
+                <li><a href="#leave_message">Leave a Message</a></li>
+        
+    </nav>
+    </header>
+
+    <h1>About</h1>
         <p>Hi, I'm Zhana Kusmangaliyeva. I am learning JavaScript in Code The Dream.</p>
         <p>I'm always eager to hear about new ideas, create, and learn new things.</p>
-    
-        <h2>Experience</h2>
-        <p>I have gained valuable experience through my journey in the world of web development. 
-           I have not much experience yet. For now i have: </p>
-           <ul>
-            
-            <li>Git</li>
-            <li>Problem Solving</li>
-            <li>Collaboration</li>
-            <li>Communication</li>
-            <li>Continuous Learning</li>
-            
-        </ul>
-        <section id="Skills">
+    <section id="experience">
+    <h1>Experience</h1>
+    <p>Embarking on my journey in web development has been an exhilarating experience. Although my professional timeline is relatively brief, I've been actively involved in:</p>
+    <div class="experience-grid">
+        <div class="experience-item">Exploring Video Streaming Solutions</div>
+        <div class="experience-item">Conducting Mobile Testing</div>
+        <div class="experience-item">Performing Analytical Testing</div>
+    </div>
+    <p>I also possess strong knowledge in various areas of web development.</p>
+    <p>My skills extend to front-end technologies like HTML, CSS, and JavaScript, as well as back-end technologies such as Node.js and databases like MongoDB.</p>
+    <p>In addition, I have experience working with frameworks like React and tools such as Git for version control.</p>
+    <p>Also, I bring robust knowledge across diverse facets of web development. My journey has honed my:</p>
+    <ul>
+        <li>Problem Solving Capabilities</li>
+        <li>Strong Emphasis on Collaborative Work</li>
+        <li>Effective Communication Skills</li>
+        <li>Continual Commitment to Learning</li>
+    </ul>
+    <p>I possess a keen eye for detail and a passion for staying 
+    abreast of emerging technologies in the field.</p>
+    </div>
+</section>
+
+<section id="Skills">
             <h2>Skills</h2>
             
             <ul>
@@ -38,16 +59,18 @@
                 <li>Continuous Learning</li>
                 
             </ul>
-        </section>
-    
+    </section>
+    <section>
         <h3>Connect</h3>
         <p>Let's connect and explore the endless possibilities of technology together!</p>
     
         <p>Email: <a href="mailto:Zhana.Kusman@gmail.com">Zhana.Kusman@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/ZhanaKusman/intro-to-programming-2023">https://github.com/ZhanaKusman/intro-to-programming-2023</a></p>
+    </section>
+        
         <section>
             <h2>Leave a Message</h2>
-            <form name="leave_message">
+            <form class="leave-message-form">
                 <label for="usersName">Name:</label><br>
                 <input type="text" name="usersName" required><br>
 
@@ -70,5 +93,3 @@
         <script src="js/index.js"></script>
 </body>
 </html>
-
-
