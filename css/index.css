@@ -2,6 +2,17 @@ body {
     background-color: bisque;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body{
+        background-color: lightblue;
+    }
+}
+
+@media only screen and(min-width: 767px) {
+    body{
+        background-color: lightgreen;
+    }
 }
 section {
     margin-bottom: 20px;
@@ -50,3 +61,55 @@ footer {
     color: rgb(55, 48, 39);
     text-align: center;
 }
+#experience {
+
+    display: flexbox;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    gap: 20px;
+}
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.experience-item {
+    flex: 1 0 200px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+.leave-message-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto; 
+}
+
+.leave-message-form label,
+.leave-message-form input,
+.leave-message-form textarea,
+.leave-message-form button {
+    margin-bottom: 10px;
+}
+
+.leave-message-form input,
+.leave-message-form textarea,
+.leave-message-form button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.leave-message-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leave-message-form button:hover {
+    background-color: #0056b3;
+}
+
