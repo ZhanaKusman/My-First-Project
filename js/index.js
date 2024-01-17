@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const skillsList = skillsSection.querySelector('ul');
   
   
-    const messageForm = document.forms['leave_message'];
+    const messageForm = document.getElementById('leave_message_form');
   
     messageForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -47,4 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
   });
+  fetch('https://api.github.com/users/ZhanaKusman/repos')
+  .then(response => response.json())
+  .then(data => {
+      const projectsList = document.querySelector('#projects ul');
+
+          data.forEach(repo => {
+          const listItem = document.createElement('li');
+          listItem.textContent = repo.name;
+          projectsList.appendChild(listItem);
+      });
+  })
+  .catch(error => console.error('Error:', error));
 });
+     
+ 
