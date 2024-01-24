@@ -93,4 +93,4 @@ githubRequest.addEventListener('load', function () {
 });
 
 githubRequest.send();
-});
+
