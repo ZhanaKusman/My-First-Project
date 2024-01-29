@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('https://api.github.com/users/ZhanaKusman/repos')
   .then(response => response.json())
   .then(data => {
-      const projectsList = document.querySelector('#projects ul');
+      const projectList = document.querySelector('#projects ul');
 
           data.forEach(repo => {
           const listItem = document.createElement('li');
@@ -62,7 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
   .catch(error => console.error('Error:', error));
 });
      
- 
+const observer = new MutationObserver((mutationsList, observer) => {
+    const config = { childList: true, subtree: true };
+   observer.observe(document, config);
+});
 
 
 const githubRequest = new XMLHttpRequest();
@@ -73,7 +76,7 @@ githubRequest.addEventListener('load', function () {
         const repositories = JSON.parse(githubRequest.response);
         console.log(repositories);
      
-        const projectSection = document.getElementById('project');
+        const projectSection = document.getElementById('Projects');
         const projectList = projectSection.querySelector('ul');
 
     
@@ -92,5 +95,5 @@ githubRequest.addEventListener('load', function () {
     }
 });
 
-githubRequest.send();
+
 
