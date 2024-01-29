@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     const skills = [
         'Front-end: JavaScript, HTML, CSS',
-        'Back-end: Node.js, Express',
+        'Back-end: Node.js',
         'Databases: MongoDB',
         'Frameworks: React',
         'Version Control: GitHub',
