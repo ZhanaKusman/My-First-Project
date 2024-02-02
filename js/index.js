@@ -22,6 +22,22 @@ document.addEventListener('DOMContentLoaded', function () {
         skillsList.appendChild(li);
     });
   
+
+    fetch('https://api.github.com/users/ZhanaKusman/repos')
+        .then(response => response.json())
+        .then(data => {
+            const projectsList = document.querySelector('#projectsList');
+            data.forEach(project => {
+                const li = document.createElement('li');
+                li.textContent = project.name + ': ' + project.description;
+                projectsList.appendChild(li);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching projects:', error);
+        });
+    
+
     const messageForm = document.getElementById('leave_message_form');
   
     messageForm.addEventListener('submit', function(event) {
